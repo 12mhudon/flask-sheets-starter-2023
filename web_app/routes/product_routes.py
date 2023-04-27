@@ -14,6 +14,6 @@ def products():
     # TODO: fetch products from the database instead
     #products = DEFAULT_PRODUCTS
     
-    service = current_app.config("SPREADSHEET_SERVICE")
+    service = current_app.config["SPREADSHEET_SERVICE"]
     products = service.get_products()
     return render_template("products.html", products=products)
